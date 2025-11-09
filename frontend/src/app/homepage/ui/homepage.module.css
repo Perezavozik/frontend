@@ -1,0 +1,50 @@
+.headerPage {
+    font-size: var(--s28);
+    font-weight: 700;
+}
+
+
+.containerText p {
+    font-size: var(--s16);
+}
+.containerText .title {
+    font-size: var(--s24);
+    font-weight: 700;
+
+    margin-bottom: .833rem;
+}
+
+.containerImg {
+    width: 100%;
+    aspect-ratio: 680 / 360;
+    overflow: hidden;
+    border-radius: .33rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: .833rem;
+}
+
+  
+.containerImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.containerNews {
+    padding-bottom: 2rem;
+}
+
+@media (orientation: portrait){
+    .containerImg {
+        border-radius: .25rem;
+    }
+    .headerPage {
+        display:none;
+    }
+    .mobileSeparator {
+        display:none;
+    }
+}

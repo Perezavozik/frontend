@@ -1,0 +1,12 @@
+.separator {
+    width: 100%;
+    border: 1px solid var(--border-gray);
+
+    margin: 1.66rem 0;
+}
+
+@media (orientation: portrait){
+    .separator {
+        margin: .833rem 0;
+    }
+}

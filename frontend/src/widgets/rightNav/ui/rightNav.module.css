@@ -1,0 +1,36 @@
+.rightNav {
+    width: 11rem;
+
+    display: flex;
+    flex-direction: column;
+
+    position: static;
+    top: 1rem;
+}
+.topBlock {
+    margin-bottom: .833rem;
+}
+
+.topBlock:empty {
+    margin-bottom: 0;
+}
+
+.topBlock,
+.bottomBlock {
+    background-color: var(--white);
+    border-radius: 0.66rem;
+}
+
+@media (orientation: portrait){
+    .rightNav {
+        width: 100%;
+        /*компенсация padding в layout*/
+        max-width: calc(100vw - var(--mobile-padding)*2); 
+        overflow-x: hidden; 
+
+    }
+
+    .topBlock {
+        margin-bottom: .833rem;
+    }
+}

@@ -1,0 +1,245 @@
+.container {
+    padding: 0.33rem 1.33rem;
+    background-color: var(--white);
+
+    border-radius: 0.66rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.833rem;
+
+}
+.searchContainer {
+    border-radius: 1.33rem;
+    border: 1px solid var(--border-gray);
+
+    padding:0.5rem 0.833rem;
+    width: 100%;
+
+    background-color: var(--light-gray);
+
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.search {
+    font-size: var(--s16);
+    font-weight: 500;
+    color: var(--text-gray);
+
+    opacity: 0.4;
+    width: 100%;
+}
+.searchButton {
+    width: .833rem;
+}
+.searchContainer button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.searchResults {
+    background-color: var(--white);
+
+    border-radius: 0.66rem;
+    height: 70vh;
+    max-height: 80vh;
+}
+
+.searchResults > div:last-child {
+    padding-bottom: 1.33rem;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    z-index: 9;
+}
+
+.headerContainer {
+    position: relative;
+    z-index: 10;
+}
+
+.popup {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: .5rem;
+
+    width: 100%;
+
+    background-color: var(--white);
+    border-radius: .66rem;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.16);
+
+    max-height: 60vh;
+    overflow-y: auto;
+
+    padding: 1.33rem;
+}
+
+.filtresContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .66rem;
+}
+.filtresContainer button {
+    padding: .5rem 2rem;
+    border-radius: .33rem;
+
+    background-color: transparent;
+    font-size: var(--s16);
+
+    transition: background-color .4s ease;
+}
+.filtresContainer button:hover {
+    background-color: #F8F8F8;
+}
+.separator {
+    height: 1px;
+    background-color: #F8F8F8;
+    width: 100%;
+    margin: .5rem 0;
+}
+
+.gridResult {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: .833rem;
+    width: 100%;
+    align-items: stretch;
+}
+.resultItem {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+
+}
+.containerImg {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: .33rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.containerImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.containerText p{
+    font-size: var(--s14);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.containerText .title {
+    font-size: var(--s16);
+    font-weight: 700;
+
+    margin: .66rem 0 .33rem 0;
+}
+
+.titleGroup {
+    font-size: var(--s18);
+}
+.groupContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     margin: 1rem 0;
+}
+.groupContainer button {
+    font-size: var(--s16);
+    color: var(--light-blue);
+    text-decoration: underline;
+}
+.notFound {
+    font-size: var(--s18);
+    text-align: center;
+    margin-top: 1rem;
+}
+@media (orientation: portrait){
+    .localeSwitcherContainer {
+        max-width: 1000px;
+        overflow: hidden;
+        flex-shrink: 0;
+    
+        transition: max-width .3s ease;
+    }
+    .localeDeactive {
+        max-width: 0;
+    }
+}
+
+
+@media (orientation: portrait){
+    .container{
+        display: flex;
+        flex-direction: row-reverse;
+
+        padding: .33rem;
+        gap: 0;
+    }
+    .searchContainer {
+        border: none;
+        padding: 0;
+        padding-left: .3rem;
+        background-color: var(--white);
+    }
+    .searchButton {
+        width: 1rem;
+    }
+    .searchContainer button {
+        padding: .4rem .5rem;
+
+        background-color: #F8F8F8;
+        border-radius: .33rem;
+    }
+    .search::placeholder{
+        opacity: 0;
+    }
+    .filtresContainer {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+
+        display: flex;
+        gap: .5rem;
+    }
+    .filtresContainer button{
+        padding: .5rem 1rem;
+    }
+    .gridResult {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .popup {
+        padding: .833rem;
+    }
+    .containerText .title {
+        font-weight: 600;
+    }
+    .titleGroup {
+        font-size: var(--s16);
+    }
+    .groupContainer button {
+        font-size: var(--s14);
+    }
+}

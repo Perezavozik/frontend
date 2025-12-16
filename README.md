@@ -154,3 +154,7 @@ Next.js build → статические страницы + SSR
 Разделение чанков
 
 Использование RSC (React Server Components) там, где возможно
+
+
+Дизайн: 
+https://pixso.net/app/design/XZTuYSfofxPYW9-vtsl34w?icon_type=1&page-id=0%3A1 Invite you to join the Pixso Design file "FLNKA"
